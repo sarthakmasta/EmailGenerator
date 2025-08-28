@@ -22,7 +22,8 @@ def generate_email():
 
     payload = {
         "model": "llama3.2",  
-        "prompt": full_prompt
+        "prompt": full_prompt, 
+        "stream": False
     }
 
     try:
@@ -71,5 +72,6 @@ subject_text.pack(pady=5)
 tk.Label(root, text="Body:").pack()
 body_text = tk.Text(root, height=15, width=55, wrap="word")
 body_text.pack(pady=5)
+
 
 root.mainloop()
